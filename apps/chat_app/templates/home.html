@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="container">
+        <a href="{% url 'logout_login' %}">Logout</a>/
+        <a href="{% url 'password_change' %}">Change Password</a>/
+        <span> You are logged in as: '{{user.username}}' !</span>
+    </div>
+{% else %}
+     <div class="container">
+        <a href="{% url 'login' %}">Login</a>/
+        <a href="{% url 'signup' %}">Signup</a>/
+        <span> Hello 'visitor' !</span>
+    </div>
+{% endif %}
+<div class="container text-center"> <h1 style="font-family:san-serif; color:blue">WELCOME</h1> </>
+
+{% endblock%}

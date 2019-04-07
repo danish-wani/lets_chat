@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+<h2>Login</h2>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}<br>
+    <!--next:{{ next }}<br>-->
+    <!--site:{{ site }}<br>-->
+    <!--site_name:{{ site_name }}-->
+    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="submit" value="Login">
+    <a href="{% url 'password_reset' %}"><p> Forgot Passsword? </p></a>
+</form>
+</div>
+{% endblock %}

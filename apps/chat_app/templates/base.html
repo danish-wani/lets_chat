@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    {% load static%}
+    {% block title %}
+    <title>Let's Chat</title>
+
+    {% endblock %}
+</head>
+<body>
+
+<div class="jumbotron">
+    <img src="{% static 'images/chat.png' %}" height="80px" width="80px" ><h2 style="font-family:Times Roman;display:inline"> Let's Chat </h2>
+</div>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
