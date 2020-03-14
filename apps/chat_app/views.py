@@ -7,11 +7,12 @@ from django.contrib.auth.views import logout_then_login
 
 # @login_required
 
+
 class Home(View):
 
     def get(self, request, *args, **kargs):
         return render(request, 'home.html')
-        # pass
+
 
 class Signup(View):
 
