@@ -3,19 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--    jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
     {% load static%}
     {% block title %}
     <title>Let's Chat</title>
 
     {% endblock %}
+    <style>
+        .header{
+            margin-top: -40px;
+        }
+        .jumbotron{
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="jumbotron">
-    <img src="{% static 'images/chat.png' %}" height="80px" width="80px" ><h2 style="font-family:Times Roman;display:inline"> Let's Chat </h2>
-</div>
-    {% block content %}
+    <div class="jumbotron">
+        <div class="header">
+            <a href="{% url 'login' %}"><img src="{% static 'images/chat.png' %}" height="80px" width="80px"></a>
+            <h2 style="font-family:Times Roman;display:inline"> Let's Chat </h2>
+        </div>
+    </div>
+    <div class="container">
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
+    </div>
 </body>
 </html>

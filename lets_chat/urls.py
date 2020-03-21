@@ -26,5 +26,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', Signup.as_view(), name='signup'),
     path('logout_login/', logout, name='logout_login'),
-    # path('accounts/password_change/', PasswordChangeView.as_view(template_name='password_change_form.html'),name='password_change'),
+    # path('api/', include('chat_app.api.api_urls')),
+    # path('accounts/password_change/', PasswordChangeView.as_view(template_name='password_change_form.html'),
+    # name='password_change'),
 ]

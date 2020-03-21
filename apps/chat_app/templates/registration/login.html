@@ -10,9 +10,11 @@
     <!--next:{{ next }}<br>-->
     <!--site:{{ site }}<br>-->
     <!--site_name:{{ site_name }}-->
-    <input type="hidden" name="next" value="{{ next }}" />
-    <input type="submit" value="Login">
-    <a href="{% url 'password_reset' %}"><p> Forgot Passsword? </p></a>
+    <p>
+        <input type="hidden" name="next" value="{{ next }}" />
+        <input type="submit" class="btn btn-primary" value="Login">
+    </p>
+    <p><a href="{% url 'password_reset' %}"> Forgot Passsword?</a> </p>
 </form>
 </div>
 {% endblock %}

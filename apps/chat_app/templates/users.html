@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>List of Users</title>
+{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+      <div class="grid-example col s12 card-panel light-green lighten-5" style="text-align:center"><span class="flow-text">List Users</span></div>
+  </div>
+
+    <script>
+        $(function(){
+            console.log('hello');
+            var list_users_api = "{% url 'list-users' %}";
+            $.get( list_users_api, function( data ) {
+                console.log(data, typeof(data));
+                alert( "Load was performed." );
+            }, "json");
+            });
+
+    </script>
+{% endblock %}
